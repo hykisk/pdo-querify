@@ -1,0 +1,15 @@
+body {
+  font-family: "Robot", sans-serif !important;
+}
+
+button.btn {
+  margin: 0px 0px 5px 0px;
+}
+
+textarea {
+  width: 100%;
+}
+
+#empty {
+  border: none;
+}

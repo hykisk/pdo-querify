@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>pdo-querify</title>
+  </head>
+  <body>
+    <div class="card">
+      <!-- input -->
+      <div class="card-body">
+        <h1>pdo-querify</h1>
+        <p>$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, true); してもDBログ上のクエリが変数展開されないときに使えます。</p>
+        <button type="button" class="btn btn-primary" id="run" onclick="run()">
+          RUN
+        </button>
+        <textarea id="src" rows="8"></textarea>
+      </div>
+      <!-- output -->
+      <div class="card-body">
+        <button
+          type="button"
+          class="btn btn-dark"
+          id="copy"
+          onclick="copy()"
+          data-toggle="tooltip"
+          data-trigger="click"
+          title="Copied"
+        >
+          COPY OUTPUT
+        </button>
+
+        <textarea readonly id="output" rows="16" style="border:none; background-color:lightgrey"></textarea>
+      </div>
+    </div>
+    <input id="empty"></input>
+    <!-- head 内に書くとなぜか ready イベントをハンドルできない -->
+    <script src="src/index.js"></script>
+  </body>
+
+</html>
